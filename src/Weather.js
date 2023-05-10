@@ -1,47 +1,107 @@
-import React from "react";
-import PartlyCloudyDay from "./icons/partly-cloudy-day.svg";
+import React, { useState } from "react";
+import axios from "axios";
+import ReactLoading from "react-loading";
 import Humidity from "./icons/humidity.svg";
 import Wind from "./icons/wind.svg";
 import "./Weather.css";
 
 export default function Weather() {
-  return (
-    <div className="Weather">
-      <form>
-        <div className="row">
-          <div className="col-9">
-            <input
-              type="search"
-              placeholder="Enter a city..."
-              className="form-control"
+  const [weatherData, setWeatherData] = useState({});
+  const [ready, setReady] = useState(false);
+  function handleResponse(response) {
+    console.log(response.data);
+    setWeatherData({
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      country: response.data.sys.country,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    });
+    setReady(true);
+  }
+
+  const apiKey = "03de31d04fb70d99511816e779098e29";
+  let city = "Taranto";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+
+  if (ready) {
+    return (
+      <div className="Weather">
+        <form>
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                className="form-control"
+              />
+            </div>
+            <div className="col-3">
+              <input type="submit" value="Search" className="btn btn-success" />
+            </div>
+          </div>
+        </form>
+        <h1>
+          {weatherData.city},{" "}
+          <span className="country">{weatherData.country}</span>
+        </h1>
+        <ul>
+          <li>Wednesday 10:23</li>
+          <li>{weatherData.description}</li>
+        </ul>
+        <div className="row mt-3">
+          <div className="col-6">
+            <img
+              src={weatherData.iconUrl}
+              alt={weatherData.description}
+              width={130}
+              height={130}
             />
+
+            <span className="temperature">
+              {Math.round(weatherData.temperature)}
+            </span>
+            <span className="unit">°C</span>
           </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary" />
+          <div className="col-6 mt-2">
+            <ul>
+              <li className="conditions">
+                <img
+                  src={Humidity}
+                  alt="humidity"
+                  width={50}
+                  height={50}
+                  className="humidity"
+                />
+                : {Math.round(weatherData.humidity)}%
+              </li>
+              <li className="conditions">
+                <img
+                  src={Wind}
+                  alt="wind"
+                  width={50}
+                  height={50}
+                  className="wind"
+                />
+                : {Math.round(weatherData.wind)} km/h
+              </li>
+            </ul>
           </div>
-        </div>
-      </form>
-      <h1>Taranto</h1>
-      <ul>
-        <li>Wednesday 10:23</li>
-        <li>Mostly Cloudy</li>
-      </ul>
-      <div className="row">
-        <div className="col-6">
-          <img src={PartlyCloudyDay} alt="Cloudy" width={100} height={100} />
-          18°C
-        </div>
-        <div className="col-6">
-          <ul>
-            <li>
-              <img src={Humidity} alt="humidity" width={50} height={50} />: 15%
-            </li>
-            <li>
-              <img src={Wind} alt="wind" width={50} height={50} />: 13 km/h
-            </li>
-          </ul>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <ReactLoading
+        type="balls"
+        color="#000"
+        height={50}
+        width={50}
+        animated={true}
+      />
+    );
+  }
 }
