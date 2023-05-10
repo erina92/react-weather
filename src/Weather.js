@@ -17,7 +17,7 @@ export default function Weather() {
       wind: response.data.wind.speed,
       city: response.data.name,
       country: response.data.sys.country,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
     setReady(true);
   }
@@ -55,7 +55,7 @@ export default function Weather() {
         <div className="row mt-3">
           <div className="col-6">
             <img
-              src={weatherData.iconUrl}
+              src={weatherData.icon}
               alt={weatherData.description}
               width={130}
               height={130}
