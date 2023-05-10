@@ -7,24 +7,11 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Taranto" />
-
+        <Weather />
         <footer>
-          This project was coded by{" "}
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            <strong>Erika Miglietta</strong>
-          </a>{" "}
-          and is{" "}
-          <a
-            href="https://github.com/erina92/react-weather"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            open-sourced on GitHub
-          </a>{" "}
-          and{" "}
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            hosted on Netlify
+          This project was developed by <a href="/">Erika Miglietta</a> and is{" "}
+          <a href="/" target="_blank" rel="nonopener">
+            open-sourced on Github
           </a>
         </footer>
       </div>
