@@ -1,11 +1,13 @@
 .Weather {
-    border: 1px solid #dadde1;
+    border: 3px solid #dadde1;
+    border-radius: 20px;
     padding: 16px;
     max-width: 600px;
+    background-color: white;
 }
 
 .Weather h1 {
-    color: #878787;
+    color: black;
     line-height: 30px;
     font-size: 24px;
     font-weight: 100;
@@ -19,7 +21,7 @@
 
 .Weather li {
     list-style: none;
-    color: #878787;
+    color: black;
     line-height: 19px;
     font-weight: 100;
     font-size: 16px;
@@ -43,12 +45,17 @@
 }
 
 .Weather .unit {
-    color: #212121;
+    color: black;
     font-size: 16px;
     font-weight: 400;
     position: relative;
     line-height: 1;
-    top: -17px;
+    top: -40px;
+    left: 10px;
+}
+
+.Weather .unit a:visited {
+    color: black;
 }
 
 .Weather .conditions {

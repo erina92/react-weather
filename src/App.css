@@ -1,10 +1,30 @@
+body::before {
+    content: "";
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
 .App {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 250px auto;
     font-family: monospace;
+    color: black;
 }
 
 .App footer {
-    font-size: 11px;
+    font-size: 15px;
     margin: 10px 0;
+    text-align: center;
+}
+
+.App footer a {
+    color: black;
 }
