@@ -13,7 +13,7 @@ import ThunderstormNight from "./icons/thunderstorms-night.svg";
 import Snow from "./icons/snow.svg";
 import Mist from "./icons/mist.svg";
 
-export default function WeatherIcon(props) {
+export default function WeatherIcon() {
   const iconCode = {
     "01d": <ClearDayIcon />,
     "01n": <ClearNightIcon />,
@@ -35,5 +35,5 @@ export default function WeatherIcon(props) {
     "50n": <Mist />,
   };
 
-  return <svg href={iconCode[props.code]} size={props.size}></svg>;
+  return <svg href={iconCode[]} size={}></svg>;
 }
