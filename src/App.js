@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Taranto" />
         <footer>
           This project was developed by <a href="/">Erika Miglietta</a> and is{" "}
           <a href="/" target="_blank" rel="nonopener">

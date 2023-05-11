@@ -5,7 +5,7 @@ import Humidity from "./icons/humidity.svg";
 import Wind from "./icons/wind.svg";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
@@ -23,8 +23,7 @@ export default function Weather() {
   }
 
   const apiKey = "03de31d04fb70d99511816e779098e29";
-  let city = "Taranto";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
   if (weatherData.ready) {
