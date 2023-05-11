@@ -6,11 +6,11 @@ import Wind from "./icons/wind.svg";
 import "./Weather.css";
 
 export default function Weather() {
-  const [weatherData, setWeatherData] = useState({});
-  const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -18,8 +18,8 @@ export default function Weather() {
       city: response.data.name,
       country: response.data.sys.country,
       icon: response.data.weather[0].icon,
+      date: "Thursday 10:40",
     });
-    setReady(true);
   }
 
   const apiKey = "03de31d04fb70d99511816e779098e29";
@@ -27,7 +27,7 @@ export default function Weather() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form>
@@ -49,17 +49,12 @@ export default function Weather() {
           <span className="country">{weatherData.country}</span>
         </h1>
         <ul>
-          <li>Wednesday 10:23</li>
-          <li>{weatherData.description}</li>
+          <li className="fw-bold">Wednesday 10:23</li>
+          <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
           <div className="col-6">
-            <img
-              src={weatherData.icon}
-              alt={weatherData.description}
-              width={130}
-              height={130}
-            />
+            <img src={weatherData.icon} alt={weatherData.description} />
 
             <span className="temperature">
               {Math.round(weatherData.temperature)}
