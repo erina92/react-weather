@@ -25,16 +25,21 @@
     font-size: 16px;
 }
 
-.Weather .weathericon {
-    margin: 15px 0 0 0;
-    float: left;
+.Weather .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Weather .col-6 {
+    display: flex;
+    align-items: center;
 }
 
 .Weather .temperature {
     color: #212121;
     font-size: 75px;
     font-weight: 400;
-
 }
 
 .Weather .unit {
@@ -43,7 +48,7 @@
     font-weight: 400;
     position: relative;
     line-height: 1;
-    top: -40px;
+    top: -17px;
 }
 
 .Weather .conditions {

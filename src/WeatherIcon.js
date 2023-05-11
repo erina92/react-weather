@@ -13,27 +13,33 @@ import ThunderstormNight from "./icons/thunderstorms-night.svg";
 import Snow from "./icons/snow.svg";
 import Mist from "./icons/mist.svg";
 
-export default function WeatherIcon() {
+export default function WeatherIcon(props) {
   const iconCode = {
-    "01d": <ClearDayIcon />,
-    "01n": <ClearNightIcon />,
-    "02d": <CloudyIcon />,
-    "02n": <PartlyCloudyNight />,
-    "03d": <PartlyCloudyDay />,
-    "03n": <PartlyCloudyNight />,
-    "04d": <BrokenClouds />,
-    "04n": <BrokenClouds />,
-    "09d": <ShowerRain />,
-    "09n": <ShowerRain />,
-    "10d": <RainDay />,
-    "10n": <RainNight />,
-    "11d": <ThunderstormDay />,
-    "11n": <ThunderstormNight />,
-    "13d": <Snow />,
-    "13n": <Snow />,
-    "50d": <Mist />,
-    "50n": <Mist />,
+    "01d": ClearDayIcon,
+    "01n": ClearNightIcon,
+    "02d": CloudyIcon,
+    "02n": PartlyCloudyNight,
+    "03d": PartlyCloudyDay,
+    "03n": PartlyCloudyNight,
+    "04d": BrokenClouds,
+    "04n": BrokenClouds,
+    "09d": ShowerRain,
+    "09n": ShowerRain,
+    "10d": RainDay,
+    "10n": RainNight,
+    "11d": ThunderstormDay,
+    "11n": ThunderstormNight,
+    "13d": Snow,
+    "13n": Snow,
+    "50d": Mist,
+    "50n": Mist,
   };
 
-  return <svg href={iconCode[]} size={}></svg>;
+  return (
+    <img
+      src={iconCode[props.code]}
+      alt={props.alt}
+      style={{ width: "120px", height: "120px", display: "inline-block" }}
+    />
+  );
 }
