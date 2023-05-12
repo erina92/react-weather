@@ -19,7 +19,7 @@ export default function WeatherForecastDay(props) {
 
     return (
       <div>
-        {days[day]}, {number}
+        {days[day]} {number}
       </div>
     );
   }

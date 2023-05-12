@@ -48,7 +48,7 @@
     position: relative;
     top: -40px;
     font-size: 16px;
-    left: 5px;
+    left: 10px;
 }
 
 .Weather .unit a:visited {
@@ -70,6 +70,11 @@
 
 .WeatherInfo .sunset {
     margin-left: 190px;
+}
+
+hr.separator {
+    border: 1px solid green;
+    margin: 0 auto;
 }
 
 @media(min-width: 576px) {
