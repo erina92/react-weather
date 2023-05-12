@@ -35,11 +35,5 @@ export default function WeatherIcon(props) {
     "50n": Mist,
   };
 
-  return (
-    <img
-      src={iconCode[props.code]}
-      alt={props.alt}
-      style={{ width: "120px", height: "120px", display: "inline-block" }}
-    />
-  );
+  return <img src={iconCode[props.code]} alt={props.alt} style={props.style} />;
 }

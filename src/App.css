@@ -14,7 +14,7 @@ body::before {
 
 .App {
     max-width: 600px;
-    margin: 250px auto;
+    margin: 200px auto;
     font-family: monospace;
     color: black;
 }
