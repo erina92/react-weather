@@ -18,7 +18,7 @@ export default function WeatherForecast(props) {
     // .map() is used for looping through the number of the object inside forecastData,
     // otherwise we can repeat the same line < div className = "col" > all over again by changing the information inside the prop { forecastData[1] } etc.
     // we're using useEffect in React allows to apply changes after the component is loaded if something changes!
-
+    // to update the forecast we use the useEffect hook!
     // if the coordinates change when we type for a city in the search form
     // we want to setLoaded to false, otherwise it would run the "else" part again!
   }
