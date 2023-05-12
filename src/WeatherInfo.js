@@ -3,7 +3,11 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import ShowTemperature from "./ShowTemperature";
 import Humidity from "./icons/humidity.svg";
-import Wind from "./icons/wind.svg";
+import Wind from "./icons/windsock.svg";
+import Min from "./icons/thermometer-colder.svg";
+import Max from "./icons/thermometer-warmer.svg";
+import SunriseFormattedDate from "./SunriseFormattedDate";
+import SunsetFormattedDate from "./SunsetFormattedDate";
 
 export default function WeatherInfo(props) {
   return (
@@ -45,6 +49,23 @@ export default function WeatherInfo(props) {
               : {Math.round(props.data.wind)} km/h
             </li>
           </ul>
+        </div>
+        <div className="btn-group " role="group">
+          <button className="btn btn-outline-success" type="button">
+            Feels: {Math.round(props.data.feels)} °C
+          </button>
+          <button className="btn btn-outline-success" type="button">
+            <img src={Min} alt="min" width={30} height={30} />:{" "}
+            {Math.round(props.data.min)} °C
+          </button>
+          <button className="btn btn-outline-success" type="button">
+            <img src={Max} alt="max" width={30} height={30} />:{" "}
+            {Math.round(props.data.max)} °C
+          </button>
+        </div>
+        <div className="btn-group mt-2 " role="group">
+          <SunriseFormattedDate time={props.data.sunrise} />{" "}
+          <SunsetFormattedDate time={props.data.sunset} />
         </div>
       </div>
     </div>

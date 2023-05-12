@@ -10,6 +10,9 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
+      feels: response.data.main.feels_like,
+      min: response.data.main.temp_min,
+      max: response.data.main.temp_max,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -17,6 +20,8 @@ export default function Weather(props) {
       country: response.data.sys.country,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      sunrise: new Date(response.data.sys.sunrise * 1000).toLocaleTimeString(),
+      sunset: new Date(response.data.sys.sunset * 1000).toLocaleTimeString(),
     });
   }
 
