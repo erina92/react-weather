@@ -9,8 +9,16 @@ function App() {
       <div className="container">
         <Weather defaultCity="Taranto" />
         <footer>
-          This project was developed by <a href="/">Erika Miglietta</a> and is{" "}
-          <a href="/" target="_blank" rel="nonopener">
+          This project was developed by{" "}
+          <a href="https://github.com/erina92" target="_blank" rel="noreferrer">
+            Erika Miglietta
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/erina92/react-weather"
+            target="_blank"
+            rel="noreferrer"
+          >
             open-sourced on Github
           </a>
         </footer>
