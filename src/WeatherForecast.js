@@ -11,6 +11,9 @@ export default function WeatherForecast(props) {
     setForecastData(response.data.daily);
     setLoaded(true);
     // [0] first day of the forecast
+    // .map() is used for looping through the number of the object inside forecastData,
+    // otherwise we can repeat the same line < div className = "col" > all over again by changing the information inside the prop { forecastData[1] } etc.
+    // we're using useEffect in React allows to apply changes after the component is loaded if something changes!
   }
 
   if (loaded) {
