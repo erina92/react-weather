@@ -112,7 +112,6 @@ hr.separator {
     }
 
     .WeatherInfo .icon {
-        width: 100px;
         margin-top: -20px;
     }
 
@@ -121,6 +120,7 @@ hr.separator {
     }
 
     .Weather .unit {
+        font-size: 14px;
         display: inline-block;
         position: relative;
         left: 74px;
@@ -133,8 +133,8 @@ hr.separator {
     }
 
     .Weather .humidity-wind {
-        margin-left: 30px;
-        margin-top: -20px;
+        margin-left: 55px;
+        margin-top: 20px;
     }
 
     hr.separator {
