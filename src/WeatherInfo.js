@@ -12,7 +12,7 @@ import SunsetFormattedDate from "./SunsetFormattedDate";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1>
+      <h1 className="city">
         {props.data.city}, <span className="country">{props.data.country}</span>
       </h1>
       <ul>
@@ -26,12 +26,12 @@ export default function WeatherInfo(props) {
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
-            style={{ width: "120px", height: "120px", display: "inline-block" }}
+            style={{ display: "inline-block" }}
           />
           <ShowTemperature celsius={props.data.temperature} />
         </div>
         <div className="col-6 mt-2 d-flex justify-content-center">
-          <ul>
+          <ul className="humidity-wind">
             <li className="conditions">
               <img
                 src={Humidity}
@@ -54,15 +54,15 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
-        <div className="btn-group " role="group">
-          <button className="btn btn-outline-success" type="button">
+        <div className="btn-group temp " role="group">
+          <button className="btn btn-outline-warning" type="button">
             Feels: {Math.round(props.data.feels)} °C
           </button>
-          <button className="btn btn-outline-success" type="button">
+          <button className="btn btn-outline-warning" type="button">
             <img src={Min} alt="min" width={30} height={30} />:{" "}
             {Math.round(props.data.min)} °C
           </button>
-          <button className="btn btn-outline-success" type="button">
+          <button className="btn btn-outline-warning" type="button">
             <img src={Max} alt="max" width={30} height={30} />:{" "}
             {Math.round(props.data.max)} °C
           </button>

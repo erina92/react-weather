@@ -62,7 +62,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-success w-100"
+                className="button btn btn-warning"
               />
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <button class="btn btn-success" type="button" disabled>
+      <button class="btn btn-warning" type="button" disabled>
         <span
           class="spinner-border spinner-border-sm"
           role="status"

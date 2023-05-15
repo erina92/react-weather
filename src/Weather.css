@@ -3,11 +3,11 @@
     border: 3px solid #dadde1;
     border-radius: 20px;
     padding: 16px;
-    background-color: white;
+    color: white;
 }
 
 .Weather h1 {
-    color: black;
+    color: white;
     line-height: 30px;
     font-size: 24px;
     font-weight: 100;
@@ -25,6 +25,7 @@
     line-height: 19px;
     font-weight: 100;
     font-size: 16px;
+    color: white;
 }
 
 .Weather .row {
@@ -39,16 +40,16 @@
 }
 
 .Weather .temperature {
-    color: #212121;
+    color: white;
     font-size: 75px;
     font-weight: 400;
 }
 
 .Weather .unit {
+    display: inline-block;
     position: relative;
-    top: -40px;
-    font-size: 16px;
-    left: 10px;
+    left: 90px;
+    top: -87px;
 }
 
 .Weather .unit a:visited {
@@ -58,6 +59,7 @@
 
 .Weather .conditions {
     line-height: 0px;
+    color: white;
 }
 
 .Weather .humidity {
@@ -75,16 +77,4 @@
 hr.separator {
     border: 1px solid green;
     margin: 0 auto;
-}
-
-@media(min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media(min-width:768px) {
-    .container {
-        max-width: 720px;
-    }
 }

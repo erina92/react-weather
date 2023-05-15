@@ -1,15 +1,9 @@
-body::before {
+body {
     content: "";
     background-image: url("./background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.9;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+    box-sizing: border-box;
 }
 
 .App {
@@ -27,4 +21,80 @@ body::before {
 
 .App footer a {
     color: black;
+}
+
+.App footer a:hover {
+    color: yellow;
+}
+
+@media only screen and (device-width : 414px) and (device-height : 896px) {
+    body {
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .App {
+        margin: 0 auto;
+    }
+
+    .container {
+        margin-top: 100px;
+    }
+
+    .Weather .form-control {
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    .Weather .button {
+        margin-left: -30px;
+    }
+
+    .WeatherInfo .icon {
+        width: 100px;
+        margin-top: -20px;
+    }
+
+    .Weather .temperature {
+        font-size: 60px;
+    }
+
+    .Weather .unit {
+        display: inline-block;
+        position: relative;
+        left: 74px;
+        top: -75px;
+    }
+
+    .Weather .conditions {
+        font-size: 14px;
+        margin-top: -20px;
+    }
+
+    .Weather .humidity-wind {
+        margin-left: 30px;
+        margin-top: -20px;
+    }
+
+    hr.separator {
+        border: 2px solid yellow;
+        margin: 0 auto;
+    }
+
+    .WeatherInfo .btn-outline-warning {
+        font-size: 14px;
+    }
+
+    .Weather .btn-group {
+        font-size: 13px;
+    }
+
+    .WeatherInfo .sunset {
+        margin: 0;
+    }
+
+    .WeatherInfo .sunrise {
+        margin-left: 30px;
+    }
+
 }
