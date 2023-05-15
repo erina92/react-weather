@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
-            style={{ display: "inline-block" }}
+            style={{ width: "100px", height: "100px", display: "inline-block" }}
           />
           <ShowTemperature celsius={props.data.temperature} />
         </div>
@@ -54,7 +54,7 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
-        <div className="btn-group temp " role="group">
+        <div className="btn-group " role="group">
           <button className="btn btn-outline-warning" type="button">
             Feels: {Math.round(props.data.feels)} °C
           </button>
