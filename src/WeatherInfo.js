@@ -54,7 +54,7 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
-        <div className="btn-group temp " role="group">
+        <div className="btn-group temp mt-2 " role="group">
           <button className="btn btn-outline-warning" type="button">
             Feels: {Math.round(props.data.feels)} °C
           </button>

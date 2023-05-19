@@ -1,161 +1,159 @@
 .Weather {
-    max-width: 600px;
-    border: 3px solid #dadde1;
-    border-radius: 20px;
-    padding: 16px;
-    color: white;
+  max-width: 600px;
+  border: 3px solid #dadde1;
+  border-radius: 20px;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .Weather h1 {
-    color: white;
-    line-height: 30px;
-    font-size: 24px;
-    font-weight: 100;
-    margin: 20px 0 0 0;
+  color: white;
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 100;
+  margin: 20px 0 0 0;
 }
 
 .Weather ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .Weather li {
-    list-style: none;
-    color: black;
-    line-height: 19px;
-    font-weight: 100;
-    font-size: 16px;
-    color: white;
+  list-style: none;
+  color: black;
+  line-height: 19px;
+  font-weight: 100;
+  font-size: 16px;
+  color: white;
 }
 
 .Weather .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Weather .col-6 {
-    display: flex;
-    height: 100px;
+  display: flex;
+  height: 100px;
 }
 
 .Weather .temperature {
-    color: white;
-    font-size: 70px;
-    font-weight: 400;
+  color: white;
+  font-size: 70px;
+  font-weight: 400;
 }
 
 .Weather .unit {
-    display: inline-block;
-    position: relative;
-    left: 80px;
-    top: -80px;
+  display: inline-block;
+  position: relative;
+  left: 80px;
+  top: -80px;
 }
 
 .Weather .unit a:visited {
-    color: black;
+  color: black;
 }
 
 .Weather .conditions {
-    font-size: 20px;
-    margin-top: -20px;
+  font-size: 20px;
+  margin-top: -20px;
 }
 
 .Weather .humidity-wind {
-    margin-left: 30px;
-    margin-top: 25px;
+  margin-left: 30px;
+  margin-top: 25px;
 }
 
-
 .Weather .humidity {
-    float: none;
+  float: none;
 }
 
 .Weather .wind {
-    float: none;
+  float: none;
 }
 
 .WeatherInfo .sunset {
-    margin-left: 190px;
+  margin-left: 190px;
 }
 
 hr.separator {
-    border: 1px solid green;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .WeatherInfo .temp {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-@media only screen and (device-width : 414px) and (device-height : 896px) {
-    body {
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
+@media only screen and (device-width: 414px) and (device-height: 896px) {
+  body {
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
-    .App {
-        margin: 0 auto;
-    }
+  .App {
+    margin: 0 auto;
+  }
 
-    .container {
-        margin-top: 100px;
-    }
+  .container {
+    margin-top: 100px;
+  }
 
-    .Weather .form-control {
-        width: -moz-fit-content;
-        width: fit-content;
-    }
+  .Weather .form-control {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 
-    .Weather .button {
-        margin-left: -30px;
-    }
+  .Weather .button {
+    margin-left: -30px;
+  }
 
-    .WeatherInfo .icon {
-        margin-top: -20px;
-    }
+  .WeatherInfo .icon {
+    margin-top: -20px;
+  }
 
-    .Weather .temperature {
-        font-size: 60px;
-    }
+  .Weather .temperature {
+    font-size: 60px;
+  }
 
-    .Weather .unit {
-        font-size: 14px;
-        display: inline-block;
-        position: relative;
-        left: 74px;
-        top: -75px;
-    }
+  .Weather .unit {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    left: 74px;
+    top: -75px;
+  }
 
-    .Weather .conditions {
-        font-size: 14px;
-        margin-top: -20px;
-    }
+  .Weather .conditions {
+    font-size: 14px;
+    margin-top: -20px;
+  }
 
-    .Weather .humidity-wind {
-        margin-left: 55px;
-        margin-top: 20px;
-    }
+  .Weather .humidity-wind {
+    margin-left: 55px;
+    margin-top: 20px;
+  }
 
-    hr.separator {
-        border: 2px solid yellow;
-        margin: 0 auto;
-    }
+  hr.separator {
+    border: 2px solid yellow;
+    margin: 0 auto;
+  }
 
-    .WeatherInfo .btn-outline-warning {
-        font-size: 14px;
-    }
+  .WeatherInfo .btn-outline-warning {
+    font-size: 14px;
+  }
 
-    .Weather .btn-group {
-        font-size: 13px;
-    }
+  .Weather .btn-group {
+    font-size: 13px;
+  }
 
-    .WeatherInfo .sunset {
-        margin: 0;
-    }
+  .WeatherInfo .sunset {
+    margin: 0;
+  }
 
-    .WeatherInfo .sunrise {
-        margin-left: 30px;
-    }
-
+  .WeatherInfo .sunrise {
+    margin-left: 30px;
+  }
 }

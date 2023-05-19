@@ -68,7 +68,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <hr className="separator" />
+        <hr className="separator border border-warning border-2 opacity-75" />
         <WeatherForecast coord={weatherData.coord} />
       </div>
     );
