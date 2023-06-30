@@ -172,8 +172,8 @@ hr.separator {
   .Weather .unit {
     font-size: 12px;
     position: relative;
-    left: 0px;
-    top: -60px;
+    left: 20px;
+    top: -85px;
   }
 
   .Weather .conditions {
