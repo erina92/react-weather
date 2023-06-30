@@ -4,13 +4,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  overflow: hidden; /* Add this to hide vertical scrollbar */
 }
 
 .App {
   max-width: 600px;
-  margin: 200px auto;
+  margin: 0 auto;
   font-family: monospace;
   color: black;
+  height: 100vh; /* Add this to fill the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Add this to enable vertical scrolling within .App */
 }
 
 .App footer {

@@ -1,17 +1,37 @@
 .WeatherForecast {
-    text-align: center;
+  text-align: center;
 }
 
 .WeatherForecast .forecast-day {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .WeatherForecast .forecast-min-temp {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .WeatherForecast .forecast-max-temp {
+  opacity: 0.6;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .WeatherForecast {
+    text-align: center;
+  }
+
+  .WeatherForecast .forecast-day {
+    font-size: 14px;
+  }
+
+  .WeatherForecast .forecast-min-temp,
+  .WeatherForecast .forecast-max-temp {
+    font-size: 12px;
+  }
+
+  .WeatherForecast .forecast-max-temp {
     opacity: 0.6;
     margin-left: 5px;
-    font-size: 15px;
+  }
 }

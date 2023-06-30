@@ -22,15 +22,17 @@ export default function WeatherInfo(props) {
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6">
+        <div className="col">
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
             style={{ width: "120px", height: "120px", display: "inline-block" }}
           />
+        </div>
+        <div className="col">
           <ShowTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col-6 mt-2 d-flex justify-content-center">
+        <div className="col d-flex justify-content-center h-w">
           <ul className="humidity-wind">
             <li className="conditions">
               <img
@@ -54,7 +56,7 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
-        <div className="btn-group temp mt-2 " role="group">
+        <div className="btn-group temp" role="group">
           <button className="btn btn-outline-warning" type="button">
             Feels: {Math.round(props.data.feels)} °C
           </button>
@@ -67,7 +69,7 @@ export default function WeatherInfo(props) {
             {Math.round(props.data.max)} °C
           </button>
         </div>
-        <div className="btn-group mt-2 " role="group">
+        <div className="btn-group mt-2 sunrise-sunset " role="group">
           <SunriseFormattedDate time={props.data.sunrise} />{" "}
           <SunsetFormattedDate time={props.data.sunset} />
         </div>
