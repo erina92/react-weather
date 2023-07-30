@@ -93,13 +93,9 @@ hr.separator {
     margin-top: 100px;
   }
 
-  .Weather .form-control {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
-  .Weather .button {
-    margin-left: -30px;
+  input[type="search"] {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .WeatherInfo .icon {
@@ -116,12 +112,6 @@ hr.separator {
     position: relative;
     top: -35px;
     left: 30px;
-  }
-
-  .Weather .conditions {
-    font-size: 14px;
-    margin-top: -20px;
-    padding: auto;
   }
 
   .Weather .humidity-wind {
