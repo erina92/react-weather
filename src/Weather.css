@@ -114,16 +114,20 @@ hr.separator {
     font-size: 14px;
     display: inline-block;
     position: relative;
+    top: -35px;
+    left: 30px;
   }
 
   .Weather .conditions {
     font-size: 14px;
     margin-top: -20px;
+    padding: auto;
   }
 
   .Weather .humidity-wind {
     margin-left: 55px;
     margin-top: 20px;
+    padding: auto;
   }
 
   hr.separator {
@@ -163,17 +167,11 @@ hr.separator {
     margin-top: 18px;
   }
 
-  .Weather .temperature {
-    font-size: 60px;
-    position: relative;
-    top: 13px;
-  }
-
-  .Weather .unit {
-    font-size: 12px;
-    position: relative;
-    left: 20px;
-    top: -85px;
+  input[type="submit"] {
+    width: 100%;
+    font-size: 13px;
+    height: 100%;
+    margin: 0 auto;
   }
 
   .Weather .conditions {
@@ -185,8 +183,26 @@ hr.separator {
     margin-left: -40px;
   }
 
+  .WeatherInfo .h-w {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 15px;
+  }
   hr.separator {
     border: 2px solid yellow;
+  }
+  .WeatherInfo .degrees {
+    padding: 0 12px 0 0;
+  }
+  .Weather .temperature {
+    font-size: 60px;
+  }
+
+  .Weather .unit {
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    left: 10px;
   }
 
   .WeatherInfo .btn-outline-warning {

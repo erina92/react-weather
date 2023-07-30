@@ -29,10 +29,10 @@ export default function WeatherInfo(props) {
             style={{ width: "120px", height: "120px", display: "inline-block" }}
           />
         </div>
-        <div className="col">
+        <div className="col degrees">
           <ShowTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col d-flex justify-content-center h-w">
+        <div className="col h-w">
           <ul className="humidity-wind">
             <li className="conditions">
               <img
