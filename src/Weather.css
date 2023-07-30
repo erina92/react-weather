@@ -79,66 +79,6 @@ hr.separator {
   justify-content: space-evenly;
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px) {
-  body {
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  .App {
-    margin: 0 auto;
-  }
-
-  .container {
-    margin-top: 100px;
-  }
-
-  input[type="search"] {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .WeatherInfo .icon {
-    margin-top: -20px;
-  }
-
-  .Weather .temperature {
-    font-size: 60px;
-  }
-
-  .Weather .unit {
-    font-size: 14px;
-    display: inline-block;
-    position: relative;
-    top: -35px;
-    left: 30px;
-  }
-
-  .Weather .humidity-wind {
-    margin-left: 55px;
-    margin-top: 20px;
-    padding: auto;
-  }
-
-  hr.separator {
-    border: 2px solid yellow;
-    margin: 0 auto;
-  }
-
-  .WeatherInfo .btn-outline-warning {
-    font-size: 14px;
-  }
-
-  .Weather .btn-group {
-    font-size: 13px;
-  }
-
-  .WeatherInfo .sunrise-sunset {
-    display: flex;
-    justify-content: space-evenly;
-  }
-}
-
 /* CSS for smaller and medium devices */
 
 @media only screen and (max-width: 600px) {
@@ -148,7 +88,8 @@ hr.separator {
   }
 
   .Weather {
-    max-width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .Weather h1 {
@@ -158,10 +99,9 @@ hr.separator {
   }
 
   input[type="submit"] {
-    width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     height: 100%;
-    margin: 0 auto;
+    margin-left: -20px;
   }
 
   .Weather .conditions {
@@ -176,7 +116,7 @@ hr.separator {
   .WeatherInfo .h-w {
     display: flex;
     align-items: center;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 10px;
   }
   hr.separator {
     border: 2px solid yellow;
@@ -185,14 +125,17 @@ hr.separator {
     padding: 0 12px 0 0;
   }
   .Weather .temperature {
-    font-size: 60px;
+    font-size: 50px;
+    text-align: center;
   }
-
+  .Weather .degrees {
+    margin-top: 10px;
+  }
   .Weather .unit {
-    display: inline-block;
     position: relative;
     top: -15px;
     left: 10px;
+    font-size: 10px;
   }
 
   .WeatherInfo .btn-outline-warning {
