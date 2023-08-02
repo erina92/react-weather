@@ -146,6 +146,10 @@ hr.separator {
     font-size: 12px;
   }
 
+  .WeatherInfo .temp {
+    width: fit-content;
+  }
+
   .WeatherInfo .sunrise-sunset {
     display: flex;
     justify-content: space-evenly;
@@ -154,5 +158,6 @@ hr.separator {
 @media (orientation: landscape) {
   .container {
     height: 100vh;
+    margin-top: 100px;
   }
 }
