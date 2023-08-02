@@ -151,3 +151,8 @@ hr.separator {
     justify-content: space-evenly;
   }
 }
+@media (orientation: landscape) {
+  .container {
+    height: 100vh;
+  }
+}
