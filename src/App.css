@@ -7,10 +7,13 @@ body {
   box-sizing: border-box;
   overflow: hidden; /* Add this to hide vertical scrollbar */
 }
+.container {
+  margin: 0 auto !important;
+}
 
 .App {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto !important;
   font-family: monospace;
   color: black;
   height: 100vh; /* Add this to fill the viewport height */

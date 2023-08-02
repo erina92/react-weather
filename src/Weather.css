@@ -5,6 +5,7 @@
   padding: 16px;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
 }
 
 .Weather h1 {
@@ -81,10 +82,12 @@ hr.separator {
 
 /* CSS for smaller and medium devices */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
   body {
     margin: 0 auto;
     box-sizing: border-box;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
   }
 
   .Weather {
@@ -159,9 +162,10 @@ hr.separator {
     justify-content: space-evenly;
   }
 }
-@media (orientation: landscape) {
+
+@media only screen and (max-width: 896px) and (orientation: landscape) {
   .container {
     height: 100vh;
-    margin-top: 100px;
+    margin: 0 auto;
   }
 }
