@@ -143,11 +143,15 @@ hr.separator {
   }
 
   .Weather .btn-group {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .WeatherInfo .temp {
     width: fit-content;
+  }
+
+  .WeatherInfo .btn-outline-warning {
+    font-size: 10px;
   }
 
   .WeatherInfo .sunrise-sunset {
