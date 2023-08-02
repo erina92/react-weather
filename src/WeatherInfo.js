@@ -2,8 +2,6 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import ShowTemperature from "./ShowTemperature";
-import Humidity from "./icons/humidity.svg";
-import Wind from "./icons/windsock.svg";
 import Min from "./icons/thermometer-colder.svg";
 import Max from "./icons/thermometer-warmer.svg";
 import SunriseFormattedDate from "./SunriseFormattedDate";

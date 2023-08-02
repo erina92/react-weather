@@ -62,9 +62,7 @@
 }
 
 .WeatherInfo .h-w {
-  display: flex;
-  padding: 0;
-  margin: 0 !important;
+  display: inline-block;
 }
 
 hr.separator {
@@ -112,9 +110,11 @@ hr.separator {
     margin-left: -20px;
   }
 
+  .WeatherInfo .h-w {
+    display: inline-block;
+  }
   .Weather .conditions {
-    font-size: 14px;
-    margin-top: -10px;
+    font-size: 20px;
   }
 
   hr.separator {
