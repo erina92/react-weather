@@ -82,7 +82,7 @@ hr.separator {
 
 /* CSS for smaller and medium devices */
 
-@media only screen and (max-width: 600px) and (orientation: portrait) {
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   body {
     margin: 0 auto;
     box-sizing: border-box;
@@ -91,7 +91,7 @@ hr.separator {
   }
 
   .Weather {
-    max-width: 350px;
+    max-width: 600px;
     margin: 0 auto;
   }
 
@@ -101,9 +101,14 @@ hr.separator {
     margin-top: 18px;
   }
 
+  form {
+    text-align: center;
+  }
+
   input[type="submit"] {
-    font-size: 14px;
+    font-size: 18px;
     height: 100%;
+    width: 100%;
     margin-left: -20px;
   }
 
@@ -112,15 +117,6 @@ hr.separator {
     margin-top: -10px;
   }
 
-  .Weather .humidity-wind {
-    margin-left: -40px;
-  }
-
-  .WeatherInfo .h-w {
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 10px;
-  }
   hr.separator {
     border: 2px solid yellow;
   }
@@ -131,9 +127,7 @@ hr.separator {
     font-size: 50px;
     text-align: center;
   }
-  .Weather .degrees {
-    margin-top: 10px;
-  }
+
   .Weather .unit {
     position: relative;
     top: -15px;
@@ -147,10 +141,6 @@ hr.separator {
 
   .Weather .btn-group {
     font-size: 10px;
-  }
-
-  .WeatherInfo .temp {
-    width: fit-content;
   }
 
   .WeatherInfo .btn-outline-warning {
@@ -168,4 +158,7 @@ hr.separator {
     height: 100vh;
     margin: 0 auto;
   }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
 }
