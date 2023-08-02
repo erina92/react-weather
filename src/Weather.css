@@ -169,12 +169,12 @@ hr.separator {
   }
 
   .Weather {
-    max-width: 400px;
+    max-width: 380px;
     margin: 0 auto;
   }
 
   .Weather h1 {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 24px;
     margin-top: 18px;
   }
@@ -209,7 +209,7 @@ hr.separator {
     padding: 0 12px 0 0;
   }
   .Weather .temperature {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
   }
 
@@ -221,15 +221,11 @@ hr.separator {
   }
 
   .WeatherInfo .btn-outline-warning {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .Weather .btn-group {
-    font-size: 10px;
-  }
-
-  .WeatherInfo .btn-outline-warning {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .WeatherInfo .sunrise-sunset {

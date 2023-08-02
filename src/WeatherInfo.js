@@ -20,11 +20,11 @@ export default function WeatherInfo(props) {
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="row align-items-center mt-1 mb-1 main-info">
-        <div className="col text-center">
+        <div className="col text-center w-icon">
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
-            style={{ width: "120px", height: "120px", display: "inline-block" }}
+            style={{ display: "inline-block" }}
           />
         </div>
         <div className="col text-center degrees">
