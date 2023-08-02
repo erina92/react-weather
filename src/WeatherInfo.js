@@ -21,7 +21,7 @@ export default function WeatherInfo(props) {
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
-      <div className="row align-items-center mt-1">
+      <div className="row align-items-center mt-1 mb-1 main-info">
         <div className="col text-center">
           <WeatherIcon
             code={props.data.icon}
@@ -35,24 +35,10 @@ export default function WeatherInfo(props) {
         <div className="col text-center h-w">
           <ul className="humidity-wind">
             <li className="conditions">
-              <img
-                src={Humidity}
-                alt="humidity"
-                width={50}
-                height={50}
-                className="humidity"
-              />
-              : {Math.round(props.data.humidity)}%
+              h : {Math.round(props.data.humidity)}%
             </li>
             <li className="conditions">
-              <img
-                src={Wind}
-                alt="wind"
-                width={50}
-                height={50}
-                className="wind"
-              />
-              : {Math.round(props.data.wind)} km/h
+              w : {Math.round(props.data.wind)} km/h
             </li>
           </ul>
         </div>
