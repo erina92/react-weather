@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   content: "";
   background-color: #0093e9;
@@ -7,13 +19,9 @@ body {
   box-sizing: border-box;
   overflow: hidden; /* Add this to hide vertical scrollbar */
 }
-.container {
-  margin: 0 auto !important;
-}
 
 .App {
-  max-width: 600px;
-  margin: 0 auto !important;
+  margin: 0 auto;
   font-family: monospace;
   color: black;
   height: 100vh; /* Add this to fill the viewport height */
