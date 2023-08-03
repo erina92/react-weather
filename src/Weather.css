@@ -1,5 +1,5 @@
 .Weather {
-  max-width: 600px;
+  max-width: 3750%;
   border: 3px solid #dadde1;
   border-radius: 20px;
   padding: 16px;
@@ -89,7 +89,7 @@ hr.separator {
   }
 
   .Weather {
-    max-width: 600px;
+    max-width: 3750%;
     margin: 0 auto;
   }
 
@@ -169,7 +169,7 @@ hr.separator {
   }
 
   .Weather {
-    max-width: 380px;
+    max-width: 2375%;
     margin: 0 auto;
   }
 
