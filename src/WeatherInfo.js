@@ -25,7 +25,8 @@ export default function WeatherInfo(props) {
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
-            style={{ display: "inline-block", width: 80, height: 80 }}
+            style={{ display: "block", margin: "0 auto" }}
+            className="main-weather-icon"
           />
         </div>
         <div className="col text-center degrees">

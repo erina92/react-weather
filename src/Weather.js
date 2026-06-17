@@ -50,7 +50,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather" style={{ maxWidth: "30rem" }}>
+      <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row text-center">
             <div className="col-9">

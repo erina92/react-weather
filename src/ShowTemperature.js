@@ -12,7 +12,7 @@ export default function ShowTemperature(props) {
   }
   if (unit === "celsius") {
     return (
-      <div>
+      <div className="temp-display">
         <span className="temperature">{Math.round(props.celsius)}</span>
         <span className="unit">
           °C |{" "}
@@ -26,7 +26,7 @@ export default function ShowTemperature(props) {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
 
     return (
-      <div>
+      <div className="temp-display">
         <span className="temperature">{Math.round(fahrenheit)}</span>
         <span className="unit">
           <a href="/" onClick={showCelsius}>

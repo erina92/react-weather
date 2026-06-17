@@ -44,3 +44,9 @@ body {
 .App footer a:hover {
   color: #ffd700;
 }
+
+@media (max-width: 480px) {
+  .App {
+    padding: 12px;
+  }
+}

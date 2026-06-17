@@ -77,6 +77,12 @@
 }
 
 /* temperature */
+.temp-display {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .Weather .temperature {
   color: white;
   font-size: 72px;
@@ -85,11 +91,10 @@
 }
 
 .Weather .unit {
-  display: inline-block;
-  position: relative;
-  top: -28px;
-  left: 6px;
-  font-size: 16px;
+  font-size: 15px;
+  margin-left: 5px;
+  padding-top: 8px;
+  white-space: nowrap;
 }
 
 .Weather .unit a {
@@ -100,6 +105,12 @@
 
 .Weather .unit a:hover {
   color: #ffd700;
+}
+
+/* main weather icon */
+.main-weather-icon {
+  width: 80px;
+  height: 80px;
 }
 
 /* humidity / wind labels */
@@ -185,31 +196,62 @@ hr.separator {
 /* responsive */
 @media (max-width: 480px) {
   .Weather {
-    padding: 16px;
+    padding: 14px;
     border-radius: 18px;
   }
 
   .Weather h1 {
-    font-size: 22px;
+    font-size: 20px;
+    margin: 14px 0 4px;
   }
 
   .Weather .temperature {
-    font-size: 54px;
+    font-size: 52px;
   }
 
   .Weather .unit {
-    top: -20px;
-    font-size: 13px;
+    font-size: 12px;
+    padding-top: 6px;
+  }
+
+  .main-weather-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .WeatherInfo .conditions {
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   .WeatherInfo .info-pill {
     font-size: 11px;
-    padding: 5px 5px;
+    padding: 5px 4px;
   }
 
   .WeatherInfo .sunrise,
   .WeatherInfo .sunset {
     font-size: 11px;
     padding: 5px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .Weather .temperature {
+    font-size: 44px;
+  }
+
+  .Weather .unit {
+    font-size: 11px;
+  }
+
+  .main-weather-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .WeatherInfo .conditions {
+    font-size: 10px;
+    padding: 2px 5px;
   }
 }
