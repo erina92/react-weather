@@ -11,7 +11,8 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <h1 className="city">
-        {props.data.city}, <span className="country">{props.data.country}</span>
+        {props.data.city},{" "}
+        <span className="country">{props.data.country}</span>
       </h1>
       <ul>
         <li className="fw-bold">
@@ -24,7 +25,7 @@ export default function WeatherInfo(props) {
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
-            style={{ display: "inline-block" }}
+            style={{ display: "inline-block", width: 80, height: 80 }}
           />
         </div>
         <div className="col text-center degrees">
@@ -33,36 +34,30 @@ export default function WeatherInfo(props) {
         <div className="col text-center h-w">
           <ul className="humidity-wind">
             <li className="conditions">
-              h : {Math.round(props.data.humidity)}%
+              Humidity: {Math.round(props.data.humidity)}%
             </li>
             <li className="conditions">
-              w : {Math.round(props.data.wind)} km/h
+              Wind: {Math.round(props.data.wind)} km/h
             </li>
           </ul>
         </div>
       </div>
-      <div className="row">
-        {" "}
-        <div className="btn-group temp" role="group">
-          <button className="btn btn-outline-warning" type="button">
-            Feels: {Math.round(props.data.feels)} °C
-          </button>
-          <button className="btn btn-outline-warning" type="button">
-            <img src={Min} alt="min" width={30} height={30} />:{" "}
-            {Math.round(props.data.min)} °C
-          </button>
-          <button className="btn btn-outline-warning" type="button">
-            <img src={Max} alt="max" width={30} height={30} />:{" "}
-            {Math.round(props.data.max)} °C
-          </button>
+      <div className="info-pills">
+        <div className="info-pill">
+          Feels {Math.round(props.data.feels)}°C
+        </div>
+        <div className="info-pill">
+          <img src={Min} alt="min" width={20} height={20} />
+          {Math.round(props.data.min)}°C
+        </div>
+        <div className="info-pill">
+          <img src={Max} alt="max" width={20} height={20} />
+          {Math.round(props.data.max)}°C
         </div>
       </div>
-      <div className="row">
-        {" "}
-        <div className="btn-group mt-2 sunrise-sunset " role="group">
-          <SunriseFormattedDate time={props.data.sunrise} />{" "}
-          <SunsetFormattedDate time={props.data.sunset} />
-        </div>
+      <div className="sunrise-sunset">
+        <SunriseFormattedDate time={props.data.sunrise} />
+        <SunsetFormattedDate time={props.data.sunset} />
       </div>
     </div>
   );
